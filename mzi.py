@@ -7,7 +7,7 @@ import time
 import os
 
 def method(headers, view):
-    imgSrc = re.findall(r'<img src="(.+)" alt=', view)
+    imgSrc = re.findall(r'<img class="blur" src="(.+)" alt=', view)
     if imgSrc:
         response = requests.get(imgSrc[0], headers = headers)
         name = imgSrc[0].split('/')[-1]
@@ -43,7 +43,7 @@ def main():
     folder = url.split('/')[-1]
     if not os.path.exists(folder):
         os.mkdir(folder)
-        os.chdir(folder)
+    os.chdir(folder)
     getImg(headers, url)
     
 if __name__=='__main__':                                       
