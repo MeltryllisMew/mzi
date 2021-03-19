@@ -36,7 +36,7 @@ def getImg(headers, url):
 def main():
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
-        "Referer": "https://www.mzitu.com/xinggan/"
+        "Referer": ""
         }
     url = input("url: ")
     
