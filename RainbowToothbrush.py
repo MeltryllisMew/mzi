@@ -40,7 +40,7 @@ def get_text(text):
     return txt
 
 def write(txt):
-    with open("彩虹牙刷.txt", "a+", encoding="utf-8")as f:
+    with open("RainbowToothbrush.txt", "a+", encoding="utf-8")as f:
         for i in txt:
             try:
                 j = i.replace('<div class="note">', '')
@@ -56,7 +56,7 @@ def main():
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"
     }
-    doulist = "https://www.douban.com/doulist/119828526/"
+    #doulist = ""
     doulist_text = method(headers, doulist)
     note_list = get_note(doulist_text)
     for i in note_list:
