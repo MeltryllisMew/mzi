@@ -58,17 +58,17 @@ def getName(url, headers):
                         os.chdir(folder)
                     else:
                         continue
-                    getHtml("http://www.yctuk.com/" + temp, headers)
+                    getHtml("" + temp, headers)
                     os.chdir(path)
             break
             
 def main():
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"}
-    list_url = ["http://www.yctuk.com/yuanc/chuangtkus/masusu/1.html",
-                "http://www.yctuk.com/yuanc/chuangtkus/masusu/2.html"]
+    list_url = ["",
+                ""]
     for url in list_url:
         getName(url, headers)
-    #getHtml("http://www.fcrenti.com/rentiyishu/imghtml/20200710/86491.html", headers)
+
 
 if __name__=='__main__':                                       
     main()
